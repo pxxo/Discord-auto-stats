@@ -1,20 +1,18 @@
-# TOKEN = 'bcfcf78d1eca4e735a8a7672b765b760bacefdaa8df735b2b090c0b8c5284a83'
-
+# TOKEN = 'MTEyMDQwOTg3Njg1MDU1Njk4OA.GMBzX5.URv4gkARf6J2pDasb60Hzhn1lQxjNgp21rtRKc'
 import discord
+from discord.ext import commands
 
-TOKEN = 'bcfcf78d1eca4e735a8a7672b765b760bacefdaa8df735b2b090c0b8c5284a83'
-
-client = discord.Client()
-
-
-@client.command(pass_context=True)
-async def chnick(ctx, member: discord.Member, nick):
-    await member.edit(nick=nick)
-    await ctx.send(f'Nickname was changed for {member.mention} ')
+bot = commands.Bot(command_prefix='!')
 
 
+@bot.event
 async def on_ready():
-    print('ログインしました')
+    print(f'We have logged in as {bot.user}')
+    await ctx.send(f'Hello, {ctx.author.name}!')
 
 
-client.run(TOKEN)
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f'Hello, {ctx.author.name}!')
+
+bot.run('MTEyMDQwOTg3Njg1MDU1Njk4OA.GMBzX5.URv4gkARf6J2pDasb60Hzhn1lQxjNgp21rtRKc')
