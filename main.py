@@ -1,7 +1,6 @@
-# TOKEN = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 import discord
 from discord.ext import commands
-
+# TOKEN = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 bot = commands.Bot(command_prefix='!')
 
 
@@ -15,4 +14,4 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send(f'Hello, {ctx.author.name}!')
 
-bot.run('MTEyMDQwOTg3Njg1MDU1Njk4OA.GMBzX5.URv4gkARf6J2pDasb60Hzhn1lQxjNgp21rtRKc')
+bot.run(TOKEN)
