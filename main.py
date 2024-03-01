@@ -1,4 +1,4 @@
-# TOKEN = 'MTEyMDQwOTg3Njg1MDU1Njk4OA.GMBzX5.URv4gkARf6J2pDasb60Hzhn1lQxjNgp21rtRKc'
+# TOKEN = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 import discord
 from discord.ext import commands
 
